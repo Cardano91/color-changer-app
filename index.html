@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Changer App</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      transition: background-color 0.5s;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="changeColor()">Rengi Değiştir!</button>
+  <script>
+    function changeColor() {
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+</html>
